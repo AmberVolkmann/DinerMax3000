@@ -26,6 +26,14 @@ namespace DinerMax3000Console
                 hungryGuestOrder.items.Add(currentItem);
             }
 
+            foreach (MenuItem currentItem in outsideDrinks.items)
+            {
+                hungryGuestOrder.items.Add(currentItem);
+            }
+
+            Console.WriteLine("The total is:" + hungryGuestOrder.Total);
+            Console.ReadKey();
+
         }
     }
 }
