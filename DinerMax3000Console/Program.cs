@@ -32,6 +32,18 @@ namespace DinerMax3000Console
             }
 
             Console.WriteLine("The total is:" + hungryGuestOrder.Total);
+
+            try
+            {
+                outsideDrinks.AddMenuItem("French 75", "You think you're so fancy ordering this, don't you?", 0);
+            }
+            catch(Exception thrownException)
+            // This will stop our program from erroring out and just show an error message in the console. It continues to run even after we have recieved an exception
+            {
+                Console.WriteLine(thrownException.Message);
+            }
+
+
             Console.ReadKey();
 
         }
